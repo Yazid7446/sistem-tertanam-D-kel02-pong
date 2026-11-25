@@ -32,7 +32,7 @@ endif
 PC_CC     ?= gcc
 PC_CFLAGS := -O2 -Wall -Wextra -I$(COMMON) $(shell sdl2-config --cflags)
 ifeq ($(OS),Windows_NT)
-PC_LIBS   := -lmingw32 -lSDL2          # MSYS2 UCRT64: aplikasi konsol + SDL2
+PC_LIBS   := -lmingw32 -lSDL2main -lSDL2          # MSYS2 UCRT64: aplikasi konsol + SDL2
 else
 PC_LIBS   := $(shell sdl2-config --libs)
 endif
